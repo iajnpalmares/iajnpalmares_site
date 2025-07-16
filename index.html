@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igreja Apostólica Jesus para as Nações</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: white; line-height: 1.6; }
+    header {
+      background: linear-gradient(to right, #003366, #cc0000);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 1.8rem; }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: url('https://source.unsplash.com/1600x600/?church,light') center/cover no-repeat;
+      height: 60vh;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero-text {
+      background-color: rgba(0,0,0,0.6);
+      padding: 2rem;
+      margin: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h3 { margin-bottom: 1rem; font-size: 2rem; color: #003366; }
+    .box {
+      background: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .ministries, .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+    }
+    form button {
+      padding: 0.8rem 1.5rem;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+  </style>
+  <script>
+    function carregarDevocional() {
+      const versiculos = [
+        "Salmo 23:1 – O Senhor é o meu pastor; nada me faltará.",
+        "João 3:16 – Porque Deus amou o mundo de tal maneira...",
+        "Filipenses 4:13 – Posso todas as coisas naquele que me fortalece.",
+        "Provérbios 3:5 – Confia no Senhor de todo o teu coração...",
+      ];
+      const indice = new Date().getDate() % versiculos.length;
+      document.getElementById("devocional").innerText = versiculos[indice];
+    }
+  </script>
+</head>
+<body onload="carregarDevocional()">
+
+<header>
+  <h1>IAJN Palmares</h1>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#cultos">Cultos</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#ministerios">Ministérios</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<div class="hero-container">
+  <div class="hero-text">
+    <h2>Bem-vindo à IAJN Palmares</h2>
+    <p>✨ Participe de um culto conosco esta semana! 🕊️</p>
+  </div>
+</div>
+
+<section>
+  <h3>Devocional do Dia</h3>
+  <div class="box" id="devocional">Carregando devocional...</div>
+</section>
+
+<section id="sobre">
+  <h3>Sobre Nós</h3>
+  <div class="box">
+    <p>Localizada em Palmares-PE, a IAJN tem como missão proclamar o Evangelho com poder e amor.</p>
+  </div>
+</section>
+
+<section id="cultos">
+  <h3>Programação de Cultos</h3>
+  <div class="box">
+    <ul>
+      <li>Domingo - Culto da Família - 19h</li>
+      <li>Quarta-feira - Culto de Ensino - 19h30</li>
+      <li>Sexta-feira - Culto de Libertação - 19h30</li>
+    </ul>
+  </div>
+</section>
+
+<section id="eventos">
+  <h3>Calendário de Eventos</h3>
+  <div class="calendar">
+    <div class="box"><strong>22 a 28/07</strong> - Semana de Avivamento</div>
+    <div class="box"><strong>Agosto</strong> - Acampamento de Jovens</div>
+  </div>
+</section>
+
+<section id="ministerios">
+  <h3>Ministérios</h3>
+  <div class="ministries">
+    <div class="box"><strong>Louvor</strong> – Adoração em Espírito e Verdade</div>
+    <div class="box"><strong>Jovens</strong> – Encontros semanais e discipulado</div>
+    <div class="box"><strong>Infantil</strong> – Escola Bíblica para Crianças</div>
+    <div class="box"><strong>Intercessão</strong> – Oração e cobertura espiritual</div>
+  </div>
+</section>
+
+<section id="contato">
+  <h3>Contato</h3>
+  <div class="box">
+    <p><strong>Endereço:</strong> Av. Luiz Portela de Carvalho, 1629 - Newton Carneiro, Palmares-PE</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/familiaiajn" target="_blank">@familiaiajn</a></p>
+    <p><strong>Transmissão ao Vivo:</strong> <a href="https://instagram.com/familiaiajn" target="_blank">Clique aqui para assistir</a></p>
+    <p><strong>Grupo no WhatsApp:</strong> <a href="https://chat.whatsapp.com/IYihkBAYTgsHGyaaEXrDqf?mode=r_t" target="_blank">Entrar no grupo</a></p>
+    <p><strong>Compartilhar Site:</strong> <a href="https://api.whatsapp.com/send?text=Confira o site da nossa igreja! https://iajnpalmares.vercel.app" target="_blank">Compartilhar no WhatsApp</a></p>
+  </div>
+  <div class="box">
+    <h4>Formulário de Oração</h4>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Pedido de oração..." rows="4" required></textarea>
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </div>
+  <div class="box">
+    <h4>Solicitar Visita</h4>
+    <form>
+      <input type="text" placeholder="Nome completo" required>
+      <input type="text" placeholder="Endereço" required>
+      <input type="tel" placeholder="Telefone para contato" required>
+      <button type="submit">Solicitar Visita</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Igreja Apostólica Jesus para as Nações - IAJN Palmares</p>
+</footer>
+
+<a class="whatsapp-float" href="https://chat.whatsapp.com/IYihkBAYTgsHGyaaEXrDqf?mode=r_t" target="_blank" title="Entrar no grupo do WhatsApp">&#x1F4AC;</a>
+
+</body>
+</html>
