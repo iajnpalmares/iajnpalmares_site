@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IAJN - Igreja Apostólica Jesus para as Nações</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    color: #1a1a1a;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: linear-gradient(90deg, #004080, #b22222);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header .logo svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+    stroke-width: 3;
+    fill: none;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  nav a:hover,
+  nav a.active {
+    background-color: #b22222;
+  }
+  main {
+    max-width: 900px;
+    margin: 100px auto 50px;
+    padding: 0 1rem;
+  }
+  h1, h2 {
+    color: #004080;
+    margin-bottom: 0.75rem;
+  }
+  .versiculo {
+    font-style: italic;
+    font-weight: 600;
+    color: #b22222;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-left: 5px solid #004080;
+    padding-left: 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+  }
+  ul {
+    list-style: inside disc;
+    margin-top: 0.5rem;
+  }
+  .btn-primary {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+  }
+  .btn-primary:hover {
+    background-color: #002a5c;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  input[type=text],
+  input[type=tel],
+  textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #004080;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+  }
+  #btn-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #b22222;
+    border: none;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    display: none;
+    transition: background-color 0.3s;
+  }
+  #btn-top:hover {
+    background: #800000;
+  }
+  /* Devocional container */
+  #devocional-container {
+    background: #f9f9f9;
+    border: 1px solid #004080;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #004080;
+    font-weight: 600;
+  }
+  /* Responsivo */
+  @media (max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="Logo IAJN">
+    <svg viewBox="0 0 64 64" aria-hidden="true" role="img" >
+      <line x1="32" y1="4" x2="32" y2="60" />
+      <line x1="4" y1="32" x2="60" y2="32" />
+    </svg>
+    <span>IAJN</span>
+  </div>
+  <nav>
+    <a href="#inicial" class="active">Inicial</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#cultos">Cultos</a>
+    <a href="#ministerios">Ministérios</a>
+    <a href="#leitura">Leitura Bíblica</a>
+    <a href="#oracao">Oração</a>
+    <a href="#visita">Visita</a>
+    <a href="#contato">Contato</a>
+    <a href="#devocional">Devocional</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicial" tabindex="0">
+    <h1>Bem-vindo à IAJN</h1>
+    <p class="versiculo">“Buscai ao Senhor enquanto se pode achar.” - Isaías 55:6</p>
+    <p>Estamos localizados na Av. Luiz Portela de Carvalho, 1629 - Newton Carneiro, Palmares-PE.</p>
+  </section>
+
+  <section id="sobre" tabindex="0">
+    <h2>Sobre Nós</h2>
+    <p>Igreja Apostólica Jesus para as Nações - proclamando o evangelho do Reino com poder, fé e amor.</p>
+  </section>
+
+  <section id="cultos" tabindex="0">
+    <h2>Horários de Culto</h2>
+    <ul>
+      <li>Domingo - 18h</li>
+      <li>Quarta - 19h30</li>
+      <li>Sexta - 19h30</li>
+    </ul>
+  </section>
+
+  <section id="ministerios" tabindex="0">
+    <h2>Ministérios</h2>
+    <p>Jovens, Mulheres, Homens, Infantil, Intercessão, Louvor, Missões.</p>
+  </section>
+
+  <section id="leitura" tabindex="0">
+    <h2>Plano de Leitura Bíblica</h2>
+    <p>Consulte nosso plano de leitura no Instagram: <strong>@familiaiajn</strong></p>
+  </section>
+
+  <section id="oracao" tabindex="0">
+    <h2>Pedido de Oração</h2>
+    <form id="form-oracao" onsubmit="return enviarOracao(event)">
+      <input type="text" name="nome" placeholder="Seu nome (opcional)" />
+      <textarea name="pedido" placeholder="Seu pedido de oração..." required></textarea>
+      <button type="submit" class="btn-primary">Enviar Pedido</button>
+    </form>
+    <p id="status-oracao" aria-live="polite"></p>
+  </section>
+
+  <section id="visita" tabindex="0">
+    <h2>Solicite uma Visita</h2>
+    <form id="form-visita" onsubmit="return solicitarVisita(event)">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="text" name="endereco" placeholder="Endereço" required />
+      <input type="tel" name="telefone" placeholder="Telefone" required />
+      <button type="submit" class="btn-primary">Solicitar Visita</button>
+    </form>
+    <p id="status-visita" aria-live="polite"></p>
+  </section>
+
+  <section id="contato" tabindex="0">
+    <h2>Contato</h2>
+    <p>Email: contato@iajnpalmares.org</p>
+    <p>Instagram: <a href="https://instagram.com/familiaiajn" target="_blank" rel="noopener noreferrer">@familiaiajn</a></p>
+  </section>
+
+  <section id="devocional" tabindex="0">
+    <h2>Devocional do Dia</h2>
+    <button class="btn-primary" onclick="carregarDevocional()">Ler Devocional</button>
+    <div id="devocional-container" aria-live="polite"></div>
+  </section>
+</main>
+
+<button id="btn-top" title="Voltar ao topo" aria-label="Voltar ao topo" onclick="scrollToTop()">↑</button>
+
+<footer>
+  <p>© 2025 Igreja Apostólica Jesus para as Nações - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  // Scroll suave para topo
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+  // Mostrar/esconder botão topo
+  window.addEventListener('scroll', () => {
+    const btnTop = document.getElementById('btn-top');
+    if(window.scrollY > 300){
+      btnTop.style.display = 'block';
+    } else {
+      btnTop.style.display = 'none';
+    }
+  });
+
+  // Botão devocional simulado (você pode integrar Google Sheets aqui)
+  function carregarDevocional(){
+    const container = document.getElementById('devocional-container');
+    container.textContent = '“Entrega o teu caminho ao Senhor; confia nele, e ele o fará.” — Salmo 37:5';
+  }
+
+  // Envio simulado do formulário oração
+  function enviarOracao(event){
+    event.preventDefault();
+    const form = event.target;
+    const status = document.getElementById('status-oracao');
+    const pedido = form.pedido.value.trim();
+    if(pedido.length === 0){
+      status.textContent = 'Por favor, escreva seu pedido de oração.';
+      return false;
+    }
+    status.textContent = 'Pedido de oração enviado com sucesso! Obrigado.';
+    form.reset();
+    return false;
+  }
+
+  // Envio simulado do formulário visita
+  function solicitarVisita(event){
+    event.preventDefault();
+    const form = event.target;
+    const status = document.getElementById('status-visita');
+    const nome = form.nome.value.trim();
+    const endereco = form.endereco.value.trim();
+    const telefone = form.telefone.value.trim();
+    if(!nome || !endereco || !telefone){
+      status.textContent = 'Por favor, preencha todos os campos.';
+      return false;
+    }
+    status.textContent = 'Solicitação de visita enviada com sucesso! Entraremos em contato.';
+    form.reset();
+    return false;
+  }
+
+  // Menu ativo conforme rolagem (simples)
+  const sections = document.querySelectorAll('main section');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 110;
+      if(pageYOffset >= sectionTop){
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === '#' + current){
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
